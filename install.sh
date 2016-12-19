@@ -8,7 +8,7 @@ sudo npm install -g typescript
 sudo npm install -g typings
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 cd odoo-app
-#typings install debug --save
+npm run typings -- install debug --save
 npm run typings -- install dt~jasmine --save --global
 npm run typings -- install dt~node --save --global
 npm run typings -- install dt~core-js --save --global

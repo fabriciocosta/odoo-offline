@@ -3,6 +3,7 @@ export class Tickets {
     date: Date;
     amount: number = 0;
     client: string = '';
+    complete: boolean = false;
 
     constructor(values: Object = {}) {
         Object.assign(this, values);

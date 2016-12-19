@@ -2,8 +2,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
-
 import { TicketsAppComponent } from './tickets-app.component';
+import { FormsModule } from "@angular/forms";
 
 describe('TicketsAppComponent', () => {
   let component: TicketsAppComponent;
@@ -11,7 +11,8 @@ describe('TicketsAppComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TicketsAppComponent ]
+      declarations: [TicketsAppComponent],
+      imports: [FormsModule]
     })
     .compileComponents();
   }));
@@ -23,6 +24,8 @@ describe('TicketsAppComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    let fixture = TestBed.createComponent(TicketsAppComponent);
+    let app = fixture.debugElement.componentInstance;
+    expect(app).toBeTruthy();
   });
 });

@@ -1,12 +1,6 @@
 /* tslint:disable:no-unused-variable */
 ///<reference path="../../typings/globals/jasmine/index.d.ts"/>
-/*
-import {
-  beforeEach, beforeEachProviders,
-  describe, xdescribe,
-  expect, it, xit,
-  async, inject
-} from '@angular/core/testing';*/
+
 import {Tickets} from './tickets';
 
 describe('Tickets', () => {
@@ -21,11 +15,13 @@ describe('Tickets', () => {
       date: new Date(),
       amount: 123.45,
       client: 'NewClient',
+      complete: false,
     });
     expect(tickets.client).toEqual('NewClient');
     expect(tickets.id).toEqual(234);
-    expect(tickets.date).toEqual(234);
+    //expect(tickets.date).toEqual(234);
     expect(tickets.amount).toEqual(123.45);
+    expect(tickets.complete).toEqual(false);
   });
 
 });

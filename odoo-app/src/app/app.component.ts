@@ -1,4 +1,9 @@
+
+import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+
 import { Component } from "@angular/core";
+import { TicketsAppComponent } from './tickets-app/tickets-app.component';
 
 @Component({
   selector: "app-root",
@@ -6,5 +11,5 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  title = "app works!";
+  title = "Odoo-offline App";
 }
